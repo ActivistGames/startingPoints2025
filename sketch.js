@@ -123,7 +123,7 @@ function drawBlobs() {
   blobs.forEach(b => {
     push();
     translate(b.x, b.y);
-    fill(255, 255, 255, 150);
+    fill(255, 255, 255, 50);
     beginShape();
     for (let a = 0; a < TWO_PI; a += 0.1) {
       const xoff = cos(a) + b.noiseOffset;
