@@ -1,10 +1,3 @@
-/*
- * sketch.js
- * Responsive P5.js redirect page with fluid blob animation and four-column layout
- * One column per group set (WA.S12.CD02, WZ.S12.CD33 gr.1, gr.2, WZ.N12.CD28)
- * Improved blob visibility, bold links, hover cursor, corrected first column group titles
- */
-
 let blobs = [];
 const NUM_BLOBS = 3;
 
@@ -56,7 +49,7 @@ const groups = [
         url: 'https://nelahryniak.github.io/Scam_7/'
       },
       {
-        title: 'Grupa 2\nAmelia Konieczna\nIga Pietrzykowska\nDarya Vasilevich\nKateryna Yerhiieva\nGabriela Teodorczyk',
+        title: 'Grupa 2 - brak linku\nAmelia Konieczna\nIga Pietrzykowska\nDarya Vasilevich\nKateryna Yerhiieva\nGabriela Teodorczyk',
         url: ''
       },
       {
@@ -73,7 +66,7 @@ const groups = [
         url: 'https://kubibubitheprogramista.github.io/Ryan1'
       },
       {
-        title: 'Grupa 2: Dziewczyny\nMalina Kuranowska\nJulia Banaś\nKinga Roksisz',
+        title: 'Grupa 2: Dziewczyny - brak linku\nMalina Kuranowska\nJulia Banaś\nKinga Roksisz',
         url: ''
       },
       {
@@ -104,7 +97,7 @@ function windowResized() {
 }
 
 function initBlobs() {
-  blobs = [];
+ // blobs = [];
   for (let i = 0; i < NUM_BLOBS; i++) {
     blobs.push({
       x: random(width),
@@ -130,6 +123,7 @@ function drawBlobs() {
   blobs.forEach(b => {
     push();
     translate(b.x, b.y);
+    fill(255, 255, 255, 150);
     beginShape();
     for (let a = 0; a < TWO_PI; a += 0.1) {
       const xoff = cos(a) + b.noiseOffset;
@@ -138,8 +132,7 @@ function drawBlobs() {
       vertex(r * cos(a), r * sin(a));
     }
     endShape(CLOSE);
-    // Increased alpha for better visibility
-    fill(255, 255, 255, 150);
+    
     pop();
     b.noiseOffset += 0.004;
   });
