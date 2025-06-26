@@ -49,7 +49,7 @@ const groups = [
         url: 'https://nelahryniak.github.io/Scam_7/'
       },
       {
-        title: 'Grupa 2 - brak linku\nAmelia Konieczna\nIga Pietrzykowska\nDarya Vasilevich\nKateryna Yerhiieva\nGabriela Teodorczyk',
+        title: 'Grupa 2\nAmelia Konieczna\nIga Pietrzykowska\nDarya Vasilevich\nKateryna Yerhiieva\nGabriela Teodorczyk',
         url: ''
       },
       {
@@ -66,7 +66,7 @@ const groups = [
         url: 'https://kubibubitheprogramista.github.io/Ryan1'
       },
       {
-        title: 'Grupa 2: Dziewczyny - brak linku\nMalina Kuranowska\nJulia Banaś\nKinga Roksisz',
+        title: 'Grupa 2: Dziewczyny\nMalina Kuranowska\nJulia Banaś\nKinga Roksisz',
         url: ''
       },
       {
@@ -123,7 +123,7 @@ function drawBlobs() {
   blobs.forEach(b => {
     push();
     translate(b.x, b.y);
-    fill(255, 255, 255, 50);
+    fill(255, 255, 255, 150);
     beginShape();
     for (let a = 0; a < TWO_PI; a += 0.1) {
       const xoff = cos(a) + b.noiseOffset;
@@ -151,7 +151,7 @@ function drawEntries() {
     let y = marginY;
 
     // Header (bold)
-    fill(0);
+    fill('#4D4B6B');
     textSize(18);
     textStyle(BOLD);
     text(g.header, x, y);
@@ -160,7 +160,7 @@ function drawEntries() {
     // Projects
     g.projects.forEach(p => {
       // Project title bold
-      fill(0);
+      fill('#4D4B6B');
       textSize(14);
       textStyle(BOLD);
       const firstLine = p.title.split('\n')[0];
