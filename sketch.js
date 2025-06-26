@@ -151,7 +151,7 @@ function drawEntries() {
     let y = marginY;
 
     // Header (bold)
-    fill(255);
+    fill(0);
     textSize(18);
     textStyle(BOLD);
     text(g.header, x, y);
@@ -160,7 +160,7 @@ function drawEntries() {
     // Projects
     g.projects.forEach(p => {
       // Project title bold
-      fill(255);
+      fill(0);
       textSize(14);
       textStyle(BOLD);
       const firstLine = p.title.split('\n')[0];
